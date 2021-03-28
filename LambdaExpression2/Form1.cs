@@ -20,7 +20,12 @@ namespace LambdaExpression2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int[] nums = { 1, 3, 2, 4, 7, 6, 5 };
+            foreach(var row in nums) { }
+            var result = from num in nums
+                              where num >= 5
+                              select num;
+            Console.WriteLine(string.Join(",",result));
         }
     }
 }
